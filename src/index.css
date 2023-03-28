@@ -1,13 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lilita+One&family=Oswald&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: "Oswald", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 100vw;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  color: #0c8333;
+}
+h1 {
+  font-family: "Lilita One", cursive;
+}
+input[type="radio"] {
+  height: 50px;
+  width: 50px;
+  border-radius: 50% !important;
+  cursor: pointer;
+}
+.accordion-button:not(.collapsed) {
+  color: black !important;
+  background-color: white !important;
+  box-shadow: 0;
+}
+.banner,
+.thumbnail,
+.roundedThumbnail {
+  height: 50px;
+  width: 50px;
+  background-color: rgb(203, 203, 203);
+  cursor: pointer;
+}
+.banner {
+  height: 60px;
+  width: 150px;
+}
+.roundedThumbnail {
+  border-radius: 50%;
+}
+
+.thumbnailDisplay,
+.roundedThumbnailDisplay,
+.bannerDisplay {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  margin-top: 40px;
+}
+.thumbnailDisplay {
+  border-radius: 10px;
+}
+.bannerDisplay {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  margin-top: 0px;
+}
+.roundedThumbnailDisplay {
+  border-radius: 50%;
 }
