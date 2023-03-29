@@ -62,3 +62,39 @@ input[type="radio"] {
 .roundedThumbnailDisplay {
   border-radius: 50%;
 }
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.on {
+  color: #ffd500;
+}
+.off {
+  color: #ccc;
+}
+.onDot {
+  color: black;
+}
+.offDot {
+  color: rgb(179, 179, 179);
+}
+.icon {
+  color: rgb(196, 196, 196);
+  cursor: pointer;
+}
+
+.icon:first-of-type:hover {
+  color: #ffd500;
+}
+.icon:nth-of-type(2):hover {
+  color: #0dcabe;
+}
+
+.progress {
+  height: 10px;
+}
+.progress-bar {
+  background-color: rgb(13, 202, 190);
+}

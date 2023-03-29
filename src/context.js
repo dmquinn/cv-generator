@@ -12,12 +12,23 @@ function GlobalProviderWrapper(props) {
   const [style, setStyle] = useState({
     headerColor: "black",
     imageStyle: "roundedThumbnail",
+    skillDisplay: "stars",
+    skillColor: "",
   });
-  const [personalInfo, setPersonalInfo] = useState({
-    address: "",
-    city: "",
-    phone: "",
-    email: "",
+  const [contactInfo, setContactInfo] = useState({
+    address: "Auerstr. 41, 10249",
+    city: "Berlin",
+    phone: "+49 151 6618 4606",
+    email: "daniel.murphy.berlin@gmail.com",
+  });
+  const [skills, setSkills] = useState([
+    { title: "React.js", level: 5 },
+    { title: "Node.js", level: 4 },
+    { title: "Next.js", level: 3 },
+  ]);
+  const [personal, setPersonal] = useState({
+    text: "Prolific, full stack web developer with a passion for metrics and beating former best-yets. Prototyped 25 new product features per year for Flexor, Inc. Decreased rework by 22% and costs by 15%. Consistently receive high user experience scores for all web development projects, including a 55% increase for Flexor, Inc. Passionate about building world class web applications. One of my sites received a 2015 Webby for Best Navigation and Structure.",
+    icon: null,
   });
 
   return (
@@ -27,8 +38,12 @@ function GlobalProviderWrapper(props) {
         setHeader,
         style,
         setStyle,
-        personalInfo,
-        setPersonalInfo,
+        contactInfo,
+        setContactInfo,
+        skills,
+        setSkills,
+        personal,
+        setPersonal,
       }}
     >
       {props.children}

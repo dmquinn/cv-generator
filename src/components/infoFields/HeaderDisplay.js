@@ -7,7 +7,9 @@ const Personal = () => {
   const { headerColor, imageStyle } = style;
   return (
     <div className="justify-content-center text-center">
-      <img className={`${imageStyle}Display`} src={image} alt="" />
+      {image && (
+        <img className={`${imageStyle}Display`} src={image} alt={name} />
+      )}
       <h1 className="mt-4" style={{ color: headerColor }}>
         {name}
       </h1>

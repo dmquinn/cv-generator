@@ -1,6 +1,8 @@
 import React from "react";
 import HeaderDisplay from "./infoFields/HeaderDisplay";
-import PersonalInfo from "./infoFields/PersonalInfo";
+import ContactInfoDisplay from "./infoFields/ContactInfoDisplay";
+import SkillsDisplay from "./infoFields/SkillsDisplay";
+import PersonalDisplay from "./infoFields/PersonalDisplay";
 
 const Preview = () => {
   return (
@@ -9,14 +11,18 @@ const Preview = () => {
       style={{ backgroundColor: "#d3d3d3", minHeight: "100vh" }}
     >
       <div
-        className="bg-white mt-5"
-        style={{ height: " 100vh", boxShadow: "0px 0px 32px 2px #6767" }}
+        className="bg-white mt-5 fixed-left"
+        style={{ boxShadow: "0px 0px 32px 2px #6767" }}
       >
         <HeaderDisplay />
         <div className="container p-4">
-          <div className="row mt-5">
+          <div className="row mt-4">
             <div className="col-4">
-              <PersonalInfo />
+              <ContactInfoDisplay />
+              <SkillsDisplay />
+            </div>
+            <div className="col-8">
+              <PersonalDisplay />
             </div>
           </div>
         </div>

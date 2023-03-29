@@ -1,6 +1,8 @@
 import React from "react";
 import HeaderInputs from "./HeaderInputs";
-import PersonalInfoInputs from "./PersonalInfoInputs";
+import ContactInfoInputs from "./ContactInfoInputs";
+import SkillsInputs from "./SkillsInputs";
+import PersonalInput from "./PersonalInput";
 
 const Builder = () => {
   const accordionSections = [
@@ -10,13 +12,23 @@ const Builder = () => {
       indexText: "One",
     },
     {
-      component: <PersonalInfoInputs />,
-      title: "Personal Information",
+      component: <ContactInfoInputs />,
+      title: "Contact Information",
       indexText: "Two",
+    },
+    {
+      component: <SkillsInputs />,
+      title: "Skills",
+      indexText: "Three",
+    },
+    {
+      component: <PersonalInput />,
+      title: "Personal Introduction",
+      indexText: "Four",
     },
   ];
   return (
-    <div className="col-4">
+    <div className="col-4 p-5">
       <div
         className="accordion accordion-flush mt-3"
         id="accordionFlushExample"
