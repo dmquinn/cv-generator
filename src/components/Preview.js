@@ -3,6 +3,7 @@ import HeaderDisplay from "./infoFields/HeaderDisplay";
 import ContactInfoDisplay from "./infoFields/ContactInfoDisplay";
 import SkillsDisplay from "./infoFields/SkillsDisplay";
 import PersonalDisplay from "./infoFields/PersonalDisplay";
+import ExperienceDisplay from "./infoFields/ExperienceDisplay";
 
 const Preview = () => {
   return (
@@ -23,6 +24,7 @@ const Preview = () => {
             </div>
             <div className="col-8">
               <PersonalDisplay />
+              <ExperienceDisplay />
             </div>
           </div>
         </div>

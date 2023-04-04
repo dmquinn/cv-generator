@@ -4,7 +4,7 @@ import Preview from "./components/Preview";
 
 function App() {
   return (
-    <div className="App ">
+    <div className="App" style={{}}>
       <Navbar />
       <div className="row" style={{ marginRight: 0, marginLeft: 0 }}>
         <Preview />

@@ -8,18 +8,19 @@ import {
   MdInfoOutline,
   MdOutlineSurfing,
 } from "react-icons/md";
+import ColorPicker from "./ColorPicker";
 
 const ContactInfoInputs = () => {
   const [color, setColor] = useState("black");
-
-  const { personal, setPersonal } = useContext(GlobalContext);
+  const colors = ["black", "#376692", "#802626", "#c36314", "#0c8333"];
+  const { personal, setPersonal, setStyle, style } = useContext(GlobalContext);
   const iconPicker = [
-    <MdPerson2 size={30} color={color} />,
-    <MdOutlinePersonOutline size={30} />,
-    <MdAccountCircle size={30} />,
-    <MdInfoOutline size={30} />,
-    <MdRocketLaunch size={30} />,
-    <MdOutlineSurfing size={30} />,
+    <MdPerson2 size={20} color={color} />,
+    <MdOutlinePersonOutline size={20} color={color} />,
+    <MdAccountCircle size={20} color={color} />,
+    <MdInfoOutline size={20} color={color} />,
+    <MdRocketLaunch size={20} color={color} />,
+    <MdOutlineSurfing size={20} color={color} />,
   ];
   return (
     <div className="mb-3 mt-3">
@@ -32,8 +33,8 @@ const ContactInfoInputs = () => {
           setPersonal({ ...personal, text: e.target.value });
         }}
       ></textarea>
-      <p className="mt-2">Choose an icon for your personal section</p>
-      <div className="d-flex flex-row justify-content-around">
+      <p className="mt-4">Choose an icon for your personal section</p>
+      <div className="d-flex flex-row justify-content-around px-5">
         {iconPicker.map((icon, i) => (
           <div
             onClick={() => {
@@ -45,7 +46,6 @@ const ContactInfoInputs = () => {
           </div>
         ))}{" "}
       </div>
-      <button onClick={() => setColor("blue")}>go</button>
     </div>
   );
 };

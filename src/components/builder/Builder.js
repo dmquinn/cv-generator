@@ -3,6 +3,7 @@ import HeaderInputs from "./HeaderInputs";
 import ContactInfoInputs from "./ContactInfoInputs";
 import SkillsInputs from "./SkillsInputs";
 import PersonalInput from "./PersonalInput";
+import ExperienceInputs from "./ExperienceInputs";
 
 const Builder = () => {
   const accordionSections = [
@@ -25,6 +26,11 @@ const Builder = () => {
       component: <PersonalInput />,
       title: "Personal Introduction",
       indexText: "Four",
+    },
+    {
+      component: <ExperienceInputs />,
+      title: "Experience",
+      indexText: "Five",
     },
   ];
   return (

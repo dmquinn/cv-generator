@@ -1,10 +1,11 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context";
+import ColorPicker from "./ColorPicker";
 
 const HeaderInputs = () => {
   const { setHeader, header, setStyle, style } = useContext(GlobalContext);
   const imageStylePicker = ["roundedThumbnail", "banner", "thumbnail"];
-  const colorPicker = ["black", "#376692", "#802626", "#c36314", "#0c8333"];
+  const colors = ["black", "#376692", "#802626", "#c36314", "#0c8333"];
   return (
     <form>
       <div className="mb-3 mt-3">
@@ -33,22 +34,7 @@ const HeaderInputs = () => {
           onChange={(e) => setHeader({ ...header, name: e.target.value })}
         />
         <p className="mt-3">Color of Name</p>
-        <div className="d-flex flex-row px-5">
-          {colorPicker.map((color, i) => {
-            return (
-              <div className="form-check p-1" key={i}>
-                <input
-                  type="radio"
-                  name="flexRadioDefault"
-                  defaultChecked={color === "black"}
-                  className="form-check-input"
-                  style={{ backgroundColor: color }}
-                  onChange={() => setStyle({ ...style, headerColor: color })}
-                />
-              </div>
-            );
-          })}
-        </div>
+        <ColorPicker colors={colors} setStyle={setStyle} style={style} />
       </div>
       <div className="mb-3">
         <input
